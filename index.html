@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hevodata</title>
+    <title>Hevodata Assignment</title>
 
     <!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.css" rel="stylesheet">
@@ -11,30 +11,57 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
+	
+    <!-- Header Start -->
 		<header>
-			<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
-				<a class="navbar-brand" href="index.html">Hevodata</a>
+			<nav class="navbar navbar-expand-md navbar-light sticky-top">
+				<!-- Brand Logo -->
+				<a class="navbar-brand"><img src="images/logo.svg"></a>
+				
+				<!-- Mobile Toggle -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				
 				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Home</a>
-						</li>
-					</ul>
-					<div class="form-inline mt-2 mt-md-0">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Profile</button>
+					<!-- Menu Bar -->
+					<div class="col-sm-5 col-md-6 col-lg-4">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Today</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Following</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Search Box -->
+					<div class="col-sm-6 col-md-5 col-lg-7">
+						<div class="form-inline mt-2 mt-md-0">
+							<input class="form-control d-block rounded-pill bg-light col-md-12 mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+						</div>
+					</div>
+					<!-- Add New Card -->
+					<div class="col-sm-1 col-md-1 col-lg-1">
+						<button class="btn btn-outline-primary rounded-circle btn-add-card float-right my-2 my-sm-0" type="submit">+</button>
 					</div>
 				</div>
 			</nav>
 		</header>
+    <!-- Header Ends -->
+		
+    <!-- Card Layout Start -->
 		<main role="main" class="container-fluid">
 			<div class="card-columns">
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/cd/f9/60/cdf960818eee13e53e74f3460ce8f9f1.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Office Model</h5>
+						<span class="card-title">Office Model</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
@@ -62,6 +89,12 @@
 					</div>
 				</div>
 				<div class="card">
+					<img src="https://i.pinimg.com/564x/ac/39/f8/ac39f827da9889adbf7303eb1aab2c6d.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Classroom</h5>
+					</div>
+				</div>
+				<div class="card">
 					<img src="https://i.pinimg.com/564x/e3/8f/22/e38f22e8def03bba71bea804ed710ebd.jpg" class="card-img-top">
 					<div class="card-body">
 						<h5 class="card-title">Mobile Apps</h5>
@@ -80,14 +113,94 @@
 					</div>
 				</div>
 				<div class="card">
+					<img src="https://i.pinimg.com/564x/ba/4c/37/ba4c3756e75e76250f13973b3eea5301.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Poet Tree</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/564x/fc/2d/44/fc2d44947537f9a967cea87ab7132643.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Shoes</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/01/d4/d7/01d4d71022b4872125932fe69322f31b.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Lake</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/68/97/ac/6897acebc96afc5f30cb7e5129fc289e.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Birds</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/8a/3d/97/8a3d97c353295628025d66eb2ae683dc.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Sunset</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/564x/fc/2d/44/fc2d44947537f9a967cea87ab7132643.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Shoes</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/9c/6d/67/9c6d67bcaca865f9665dd399974c1806.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Butterfly</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/56/18/23/56182338760063b0e9bd3b4e73b9d02f.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Colorfull</h5>
+					</div>
+				</div>
+				<div class="card">
 					<img src="https://i.pinimg.com/474x/93/2f/cf/932fcf89024789c3d8506f76f4ec211f.jpg" class="card-img-top">
 					<div class="card-body">
 						<h5 class="card-title">Flower</h5>
 					</div>
 				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/78/5e/2a/785e2a9af7ed559cbd0b3e7dbb485cd4.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Night</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/dd/d7/8b/ddd78b28cde2d7cc2a9820d38ba395b0.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Hills</h5>
+					</div>
+				</div>
+				<div class="card">
+					<img src="https://i.pinimg.com/474x/ca/03/30/ca033027c2807876dbd48d64a8a955eb.jpg" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">Photography</h5>
+					</div>
+				</div>
 			</div>
 		</main>
+    <!-- Card Layout Ends -->
+		
+    <!-- Footer Start -->
+		<footer>
+			<div class="bg-primary text-white text-center py-3">
+				<p class="mb-0">Clone of Pinterest by Mallinath Shedishal</p>
+			</div>
+		</footer>
+    <!-- Footer Ends -->
+		
+		<!-- Required JavaScript Files -->
+		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<!-- Bootstrap JS -->
 		<script src="js/bootstrap.min.js"></script>
+		
 	</body>
 </html>
