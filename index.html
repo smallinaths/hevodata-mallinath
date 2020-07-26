@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hevodata Assignment</title>
-
+	<link rel="icon" type="image/png" href="images/favicon.png">
     <!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Custom styles -->
     <link href="css/styles.css" rel="stylesheet">
   </head>
@@ -14,7 +15,7 @@
 	
     <!-- Header Start -->
 		<header>
-			<nav class="navbar navbar-expand-md navbar-light sticky-top">
+			<nav class="navbar navbar-expand-md navbar-light">
 				<!-- Brand Logo -->
 				<a class="navbar-brand"><img src="images/logo.svg"></a>
 				
@@ -25,7 +26,7 @@
 				
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<!-- Menu Bar -->
-					<div class="col-sm-5 col-md-6 col-lg-4">
+					<div class="col-md-6 col-lg-4">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item active">
 								<a class="nav-link" href="index.html">Home</a>
@@ -39,22 +40,52 @@
 						</ul>
 					</div>
 					<!-- Search Box -->
-					<div class="col-sm-6 col-md-5 col-lg-7">
-						<div class="form-inline mt-2 mt-md-0">
+					<div class="col-md-5 col-lg-7">
+						<div class="mt-2 mt-md-0">
 							<input class="form-control d-block rounded-pill bg-light col-md-12 mr-sm-2" type="text" placeholder="Search" aria-label="Search">
 						</div>
 					</div>
 					<!-- Add New Card -->
-					<div class="col-sm-1 col-md-1 col-lg-1">
-						<button class="btn btn-outline-primary rounded-circle btn-add-card float-right my-2 my-sm-0" type="submit">+</button>
+					<div class="col-sm-12 col-md-1 col-lg-1 text-center">
+						<button class="btn btn-outline-primary rounded-circle btn-add-card float-md-right my-2 my-sm-2" type="submit" data-toggle="modal" data-target="#add-card-popup" title="Add new card">+</button>
 					</div>
+					<!-- Add New Card Pop-up Form Starts -->
+					<div class="modal" id="add-card-popup" tabindex="-1" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header bg-primary">
+									<h5 class="modal-title text-white">New Card Details</h5>
+									<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form id="new-card-form" method="post" action="#">
+										<div class="form-group">
+											<label for="img-url" class="col-form-label">Image URL:</label>
+											<input type="url" class="form-control rounded-pill bg-light" id="img-url" name="img-url" required>
+										</div>
+										<div class="form-group">
+											<label for="card-name" class="col-form-label">Name for Card:</label>
+											<input type="text" class="form-control rounded-pill bg-light" id="card-name" name="card-name" required>
+										</div>
+										<div class="form-group">
+											<button type="reset" class="btn btn-dark rounded-pill">Clear</button>
+											<button type="submit" class="btn btn-primary rounded-pill">Add Card</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Add New Card Pop-up Form Ends -->
 				</div>
 			</nav>
 		</header>
     <!-- Header Ends -->
 		
     <!-- Card Layout Start -->
-		<main role="main" class="container-fluid">
+		<main role="main" class="container-fluid flex-shrink-0">
 			<div class="card-columns">
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/cd/f9/60/cdf960818eee13e53e74f3460ce8f9f1.jpg" class="card-img-top">
@@ -67,121 +98,153 @@
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/d7/90/1b/d7901b3f60a4dfdf481a02ce8662878f.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Frames</h5>
+						<span class="card-title">Frames</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/3a/f3/82/3af382c00f67e9568c5ce7e627e3503b.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Furniture</h5>
+						<span class="card-title">Furniture</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/5f/bc/91/5fbc911bf9fba43831f91c51f07445a1.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Racks</h5>
+						<span class="card-title">Racks</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/54/7e/99/547e99e08f1132fce231d6f657f1c6fd.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Pencil Art</h5>
+						<span class="card-title">Pencil Art</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/ac/39/f8/ac39f827da9889adbf7303eb1aab2c6d.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Classroom</h5>
+						<span class="card-title">Classroom</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/e3/8f/22/e38f22e8def03bba71bea804ed710ebd.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Mobile Apps</h5>
+						<span class="card-title">Mobile Apps</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/11/9f/df/119fdfed3eeaea8f9430e48ac1c0095b.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Movies</h5>
+						<span class="card-title">Movies</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/05/2d/29/052d293fc02c09568985870f9f5d94b1.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Rain</h5>
+						<span class="card-title">Rain</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/ba/4c/37/ba4c3756e75e76250f13973b3eea5301.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Poet Tree</h5>
+						<span class="card-title">Poet Tree</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/564x/fc/2d/44/fc2d44947537f9a967cea87ab7132643.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Shoes</h5>
+						<span class="card-title">Shoes</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/01/d4/d7/01d4d71022b4872125932fe69322f31b.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Lake</h5>
+						<span class="card-title">Lake</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/68/97/ac/6897acebc96afc5f30cb7e5129fc289e.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Birds</h5>
+						<span class="card-title">Birds</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/8a/3d/97/8a3d97c353295628025d66eb2ae683dc.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Sunset</h5>
-					</div>
-				</div>
-				<div class="card">
-					<img src="https://i.pinimg.com/564x/fc/2d/44/fc2d44947537f9a967cea87ab7132643.jpg" class="card-img-top">
-					<div class="card-body">
-						<h5 class="card-title">Shoes</h5>
+						<span class="card-title">Sunset</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/9c/6d/67/9c6d67bcaca865f9665dd399974c1806.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Butterfly</h5>
+						<span class="card-title">Butterfly</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/56/18/23/56182338760063b0e9bd3b4e73b9d02f.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Colorfull</h5>
+						<span class="card-title">Colorfull</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/93/2f/cf/932fcf89024789c3d8506f76f4ec211f.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Flower</h5>
+						<span class="card-title">Flower</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/78/5e/2a/785e2a9af7ed559cbd0b3e7dbb485cd4.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Night</h5>
+						<span class="card-title">Night</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/dd/d7/8b/ddd78b28cde2d7cc2a9820d38ba395b0.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Hills</h5>
+						<span class="card-title">Hills</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 				<div class="card">
 					<img src="https://i.pinimg.com/474x/ca/03/30/ca033027c2807876dbd48d64a8a955eb.jpg" class="card-img-top">
 					<div class="card-body">
-						<h5 class="card-title">Photography</h5>
+						<span class="card-title">Photography</span>
+						<span class="card-save bg-primary">Save</span>
+						<span class="card-close">X</span>
 					</div>
 				</div>
 			</div>
@@ -195,12 +258,43 @@
 			</div>
 		</footer>
     <!-- Footer Ends -->
-		
+
 		<!-- Required JavaScript Files -->
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<!-- Bootstrap JS -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"></script>
 		
+		<!-- Custom JS Code -->
+		<script>
+			/* Code For Adding New Card */
+			$(document).on("submit", "#new-card-form", function(e){
+					/* Prevent Form Submission */
+					e.preventDefault();
+					
+					/* Get New Card Details From Form */
+					$cardimgurl = $('#img-url').val();
+					$cardname = $('#card-name').val();
+					var newcard = $();
+					newcard = newcard.add('<div class="card"> <img src="'+$cardimgurl+'" class="card-img-top"> <div class="card-body"> <span class="card-title">'+$cardname+'</span> <span class="card-save bg-primary">Save</span> <span class="card-close">X</span> </div> </div>');
+					
+					/* Appending The New Card To Existing List */
+					$('.card-columns').prepend(newcard);
+					
+					/* Reseting Modal Form After Submitting */
+					$('#new-card-form').trigger("reset");
+					
+					/* Closing The Modal After Form Submitting */
+					$("#add-card-popup .close").click();
+			});
+			$(document).ready(function(){
+				/* Adding Close Event To Card */
+				$('.card-columns').delegate('.card-close','click',function() {
+					$(this).closest('.card').remove();
+				});
+			});
+		</script>
 	</body>
 </html>

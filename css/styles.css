@@ -1,3 +1,7 @@
+/* Custome CSS */
+main{
+	min-height: 400px;
+}
 /* Menu bar settings */
 .navbar-nav .nav-item{
 	padding: 2px 10px;
@@ -64,6 +68,7 @@
 }
 .card img{
 	border-radius: 15px;
+	width: 100%;
 }
 .card img:hover{
     filter: opacity(90%);
@@ -79,6 +84,7 @@
 	cursor: pointer;
 	margin: 0.75rem;
 	display: none;
+	box-shadow: 0 0 9px #555;
 }
 .card:hover .card-body .card-title, .card:hover .card-body .card-save, .card:hover .card-body .card-close{
 	display: block;
