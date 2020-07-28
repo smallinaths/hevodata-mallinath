@@ -74,19 +74,19 @@ main{
     filter: opacity(90%);
 	cursor: zoom-in;
 }
-.card-body .card-title, .card-body .card-save, .card-body .card-close{
+.card-body .card-title, .card-body .card-close{
 	font-size: 14px;
 	color: #333333;
     border-radius: 18px;
 	padding: 7px 12px;
-    max-width: 132px;
+    max-width: 92%;
 	margin-bottom: 0;
 	cursor: pointer;
 	margin: 0.75rem;
 	display: none;
 	box-shadow: 0 0 9px #555;
 }
-.card:hover .card-body .card-title, .card:hover .card-body .card-save, .card:hover .card-body .card-close{
+.card:hover .card-body .card-title, .card:hover .card-body .card-close{
 	display: block;
 }
 .card-body .card-title{
@@ -94,12 +94,6 @@ main{
 	background-color: #ffffff;
 	position: absolute;
 	left: 0%;
-	bottom: 0%;
-}
-.card-body .card-save{
-	color: #ffffff;
-	position: absolute;
-	right: 0%;
 	bottom: 0%;
 }
 .card-body .card-close{
